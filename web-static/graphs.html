@@ -206,7 +206,7 @@
                     {"url": "/web/graph_data/local_share_hash_rate/last_" + lowerperiod, "value_getter": identity, "color": "#0000FF", "label": "Total"},
                     //{"url": getData("/web/graph_data/local_dead_share_hash_rate/last_" + lowerperiod, "value_getter": identity, "color": "#FF0000", "label": "Dead"}
                 ]);
-                plot_later(d3.select("#payout"), "BTC", null, [
+                plot_later(d3.select("#payout"), "LTC", null, [
                     {"url": "/web/graph_data/current_payout/last_" + lowerperiod, "value_getter": identity, "color": "#0000FF"}
                 ]);
                 plot_later(d3.select("#pool"), "H/s", "H", [
@@ -234,7 +234,7 @@
                                 ]);
                             });
                             div.append("svg:svg").each(function(u) {
-                                plot(d3.select(this), "BTC", null, [
+                                plot(d3.select(this), "LTC", null, [
                                     {"data": current_payouts, "value_getter": function(d) { return u in d ? d[u] : null; }, "color": "#0000FF"}
                                 ]);
                             });
