@@ -56,13 +56,13 @@
                     b.append('h2').text('Block');
                     var block = b.append('p')
                         block.append('span').text('Hash: ')
-                        block.append('a').attr('href', 'http://blockexplorer.com/block/' + share.block.hash).text(share.block.hash);
+                        block.append('a').attr('href', 'http://abe.liteco.in/block/' + share.block.hash).text(share.block.hash);
                     b.append('p').text('Transaction count: ' + share.block.txn_count_range);
                     b.append('h2').text('Header');
                     b.append('p').text('Version: ' + share.block.header.version);
                     var prevblock = b.append('p')
                         prevblock.append('span').text('Previous block: ');
-                        prevblock.append('a').attr('href', 'http://blockexplorer.com/block/' + share.block.header.previous_block).text(share.block.header.previous_block);
+                        prevblock.append('a').attr('href', 'http://abe.liteco.in/block/' + share.block.header.previous_block).text(share.block.header.previous_block);
                     b.append('p').text('Merkle root: ' + share.block.header.merkle_root);
                     b.append('p').text('Timestamp: ' + share.block.header.timestamp);
                     b.append('p').text('Difficulty: ' + target_to_difficulty(share.block.header.target));
